@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript1-3</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+     
+      let tasks = [];
+
+      function AddTask() {
+        let task = prompt("タスクを追加してください");
+        tasks.push(task);
+        alert("新しいタスクを追加しました");
+      }
+        
+
+      function show() {
+        console.log("=========================");
+        console.log("現在持っているタスク一覧");
+        console.log("=========================");
+        for(let i = 0; i < tasks.length; i++) {
+        console.log(`${i}　：　${tasks[i]}`);
+        }
+        }
+
+    while(true) {
+    AddTask();
+    show(); 
+   }
+    </script>
+  </body>
+</html>
