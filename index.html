@@ -8,28 +8,27 @@
     <script>
       "use strict";
      
-      let tasks = [];
+      const tasks = ["掃除","買い物","散歩"];
 
-      function AddTask() {
-        let task = prompt("タスクを追加してください");
+      function addTask() {
+        const task = prompt("タスクを追加してください");
         tasks.push(task);
         alert("新しいタスクを追加しました");
       }
         
 
       function show() {
-        console.log("=========================");
-        console.log("現在持っているタスク一覧");
-        console.log("=========================");
-        for(let i = 0; i < tasks.length; i++) {
-        console.log(`${i}　：　${tasks[i]}`);
-        }
+        console.log("=========================\n現在持っているタスク\n=========================");
+    
+        for (let i = 0; i < tasks.length; i++) {
+          console.log(`${i}　：　${tasks[i]}`);
+          }
         }
 
-    while(true) {
-    AddTask();
+    
+    addTask();
     show(); 
-   }
+   
     </script>
   </body>
 </html>
